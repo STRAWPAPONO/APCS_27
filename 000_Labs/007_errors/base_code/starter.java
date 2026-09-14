@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Branden Chung
+ *  Date: 9/10/26
 */
 
 class starter {
