@@ -47,4 +47,16 @@ class starter {
 		System.out.println();
 		System.out.println("----------------------------------------");
 	}
+	public static boolean isLeapYear(int n){
+		return ((n%4)==0);
+	}
+	public static int getDigitSum(int n){
+		digits = n
+		while(digits>0){
+			
+		}
+	}
+	public static int printIfConsecutive(int num1, int num2, int num3){
+		return (num1+num2+num3)
+	}
 }
