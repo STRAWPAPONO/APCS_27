@@ -51,12 +51,26 @@ class starter {
 		return ((n%4)==0);
 	}
 	public static int getDigitSum(int n){
-		digits = n
+		int digits = n;
+		int sum = 0;
 		while(digits>0){
-			
+			sum += digits % 10;
+			digits = digits/10;
 		}
+		return sum;
 	}
-	public static int printIfConsecutive(int num1, int num2, int num3){
-		return (num1+num2+num3)
+	public static void printIfConsecutive(int num1, int num2, int num3){
+		if((num1-1==num2)&&(num2-1==num3)){
+			System.out.println("These numbers are consecutive!!!");
+			return;
+		}
+		if((num1+1==num2)&&(num2+1==num3)){
+			System.out.println("These numbers are consecutive!!!");
+			return;
+		}
+		else{
+			System.out.println("These numbers are not consecutive!!!");
+			return;
+		}
 	}
 }
