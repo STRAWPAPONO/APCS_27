@@ -13,7 +13,77 @@ class starter {
 	static ArrayList<String> arr = new ArrayList<String>();
 
 	public static void main(String args[]) throws InterruptedException {
-		// Write your code here!
+		int choice = 0;
+		double lpm;
+		double wpm;
+		String sentence;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to Type Quest!");
+		System.out.println("It is currently "+getTime()+" and we're ready to play!");
+		System.out.println("Given a sentence, type is as fast as possible!");
+		System.out.println();
+		while(choice!=3){
+			System.out.println("------------------------------------------");
+			System.out.println("Would you like to:");
+			System.out.println("  1 - Play random");
+			System.out.println("  2 - Play set");
+			System.out.println("  3 - Quit");
+			System.out.println();
+			choice = sc.nextInt();
+			sc.nextLine();
+			if(choice==1){
+				System.out.println("You've chosen to randomly select a sentence.");
+				System.out.println();
+				System.out.println("-----------------Your sentence is:-----------------");
+				sentence = getSentence();
+				System.out.println(sentence);
+				System.out.println("---------------------------------------------------");
+				System.out.println();
+				countdown();
+				startTimer();
+				sc.nextLine();
+				String compare = sc.nextLine();
+				endTimer();
+				double decSeconds = endTimer();
+				System.out.println();
+				System.out.println("Nice job! Here is your result!");
+				System.out.println("Time: "+decSeconds);
+				System.out.println("Errors: "+compareSentences(sentence, compare)+" / "+lettersInSentence(sentence)+" letters");
+				System.out.println(((lettersInSentence(sentence))/(decSeconds/60))+" letters per minute");
+				System.out.println(((wordsInSentence(sentence))/(decSeconds/60))+" words per minute");
+			}
+			if(choice==2){
+				System.out.println("Please enter what number sentence you'd like to play: ");
+				int sentencenumber = sc.nextInt();
+				populateArrayList();
+				sentence = getSentence(sentencenumber);
+				System.out.println();
+				System.out.println("-----------------Your sentence is:-----------------");
+				System.out.println(sentence);
+				System.out.println("---------------------------------------------------");
+				System.out.println();
+				countdown();
+				startTimer();
+				sc.nextLine();
+				String compare = sc.nextLine();
+				endTimer();
+				double decSeconds = endTimer();
+				System.out.println();
+				System.out.println("Nice job! Here is your result!");
+				System.out.println("Time: "+decSeconds);
+				System.out.println("Errors: "+compareSentences(sentence, compare)+" / "+lettersInSentence(sentence)+" letters");
+				System.out.println(((lettersInSentence(sentence))/(decSeconds/60))+" letters per minute");
+				System.out.println(((wordsInSentence(sentence))/(decSeconds/60))+" words per minute");
+			}
+			if(choice==3){
+				System.exit(0);
+			}
+			else{
+				System.out.println("You did not select correctly, please try again.");
+			}
+
+
+		}
 
 		
 	}
