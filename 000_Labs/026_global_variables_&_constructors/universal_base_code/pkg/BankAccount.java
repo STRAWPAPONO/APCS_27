@@ -10,10 +10,10 @@ public class BankAccount {
 	// -------GLOBAL VARIABLES-------
 	String Owner;
 	String name;
-	int Acn;
-	double Balance;
-	boolean isActive;
-	public static int nextAccountup = (int)((Math.random()*1001)+50);
+	private int Acn;
+	private double Balance;
+	private boolean isActive;
+	private public static int nextAccountup = (int)((Math.random()*1001)+50);
 	// -------CONSTRUCTORS-------
 	public BankAccount(){
 		name = "unknown";
