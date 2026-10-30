@@ -13,29 +13,29 @@ class starter {
 		BankAccount b = new BankAccount("Walter White");
 		BankAccount c = new BankAccount("Jesse Pinkman", 230670.41);
 
-		a.displayAccountInfo();
-		b.displayAccountInfo();
-		c.displayAccountInfo();
+		a.printAccountDetails();
+		b.printAccountDetails();
+		c.printAccountDetails();
 		System.out.println();
 
 		System.out.println("----------ACCOUNT 1 ACTIONS----------");
 		a.setOwner("Mike Ehrmantraut");
-		a.deposit(50325.58);
+		a.depositMoney(50325.58);
 		System.out.println("The new owner of account a is " + a.getOwner());
 		System.out.println("The account balance of " + a.getOwner() + "'s account is " + a.getBalance());
 		System.out.println();
 
 		System.out.println("----------ACCOUNT 2 ACTIONS----------");
 		System.out.println(b.getOwner() + " is trying to withdraw $50000");
-		b.withdraw(50000);
+		b.withdrawMoney(50000);
 		System.out.println();
 
 		System.out.println("----------ACCOUNT 3 ACTIONS----------");
 		System.out.println(c.getOwner() + " is trying to withdraw $" + c.getBalance());
-		c.withdraw(c.getBalance());
+		c.withdrawMoney(c.getBalance());
 		c.checkBalance();
 		c.closeAccount();
-		c.deposit(1);
+		c.depositMoney(1);
 		
 	}
 }

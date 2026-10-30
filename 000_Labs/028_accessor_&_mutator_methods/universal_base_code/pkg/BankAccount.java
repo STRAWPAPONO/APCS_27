@@ -52,7 +52,7 @@ public class BankAccount {
 		}
 		System.out.println("Account Number: "+Acn);
 	}
-	public double AccountBalance(){
+	public double checkBalance(){
 		double accountbalance = Balance;
 		return accountbalance;
 	}
@@ -63,22 +63,22 @@ public class BankAccount {
 		return name;
 	}
 	public double getBalance(){
-		return balance;
+		return Balance;
 	}
 	public void closeAccount(){
-		isActive == false;
+		isActive = false;
 	}
 	public boolean isActive(){
 		return isActive;
 	}
 	public void depositMoney(double a){
 		if(isActive==true){
-			balance += a
+			Balance += a;
 		}
 	}
 	public void withdrawMoney(double a){
-		if((balance>=a)&&(isActive==true)){
-			balance -= a;
+		if((Balance>=a)&&(isActive==true)){
+			Balance -= a;
 		}
 	}
 

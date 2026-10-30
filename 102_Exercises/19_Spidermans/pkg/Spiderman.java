@@ -16,7 +16,7 @@ public class Spiderman {
 	public Spiderman(String a){
 		actor = a;
 		age = 0;
-		villain = "unknown"
+		villain = "unknown";
 	}
 	public Spiderman(int a){
 		actor = "unknown";
@@ -49,13 +49,13 @@ public class Spiderman {
 	public void setActor(String a){
 		actor = a;
 	}
-	public int getAge(){
+	public String getActor(){
 		return actor;
 	}
 	public void setVillain(String a){
 		villain = a;
 	}
-	public int getAge(){
+	public String getVillain(){
 		return villain;
 	}
 	
