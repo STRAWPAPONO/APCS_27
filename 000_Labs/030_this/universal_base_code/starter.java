@@ -24,7 +24,48 @@ class starter {
 
 	public static void main(String args[]) {
 		// Your code goes below here
-		PooleDwarf test = new PooleDwarf();
-		
+		int numberofduplicates = 0;
+		String name = randName();
+		int age = (int)((Math.random()*101)+1);
+		PooleDwarf a = new PooleDwarf(name, age);
+		name = randName();
+		age = (int)((Math.random()*101)+1);
+		PooleDwarf b = new PooleDwarf(name, age);
+		name = randName();
+		age = (int)((Math.random()*101)+1);
+		PooleDwarf c = new PooleDwarf(name, age);
+		name = randName();
+		age = (int)((Math.random()*101)+1);
+		PooleDwarf d = new PooleDwarf(name, age);
+		name = randName();
+		age = (int)((Math.random()*101)+1);
+		PooleDwarf e = new PooleDwarf(name, age);
+		name = randName();
+		age = (int)((Math.random()*101)+1);
+		PooleDwarf f = new PooleDwarf(name, age);
+		name = randName();
+		age = (int)((Math.random()*101)+1);
+		PooleDwarf g = new PooleDwarf(name, age);
+		if(a.getName().equals(b.getName())){
+			numberofduplicates++;
+		}
+		if(a.getName().equals(c.getName())){
+			numberofduplicates++;
+		}
+		if(a.getName().equals(d.getName())){
+			numberofduplicates++;
+		}
+		if(a.getName().equals(e.getName())){
+			numberofduplicates++;
+		}
+		if(a.getName().equals(f.getName())){
+			numberofduplicates++;
+		}
+		if(a.getName().equals(g.getName())){
+			numberofduplicates++;
+		}
+		System.out.println("The first Dwarf's name was "+a.getName()+".");
+		System.out.println("The first Dwarf's name was the name of "+numberofduplicates+" other dwarves.");
+
 	}
 }
