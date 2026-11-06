@@ -65,7 +65,7 @@ class starter {
 			numberofduplicates++;
 		}
 		System.out.println("The first Dwarf's name was "+a.getName()+".");
-		System.out.println("The first Dwarf's name was the name of "+numberofduplicates+" other dwarves.");
+		System.out.println("The first Dwarf's name had the same name as "+numberofduplicates+" other dwarves.");
 
 	}
 }
